@@ -147,7 +147,7 @@ int main()
     return 0;
 }
 */
-//Ğ´º¯Êı·½·¨£º
+//å†™å‡½æ•°æ–¹æ³•ï¼š
 /*
 #include<stdio.h>
 #define N 40
@@ -185,7 +185,7 @@ int Max(int score[N],int n)
     return Max;
 }
 */
-
+/*
 #include<stdio.h>
 #include<string.h>
 #define D 40
@@ -193,10 +193,10 @@ void Switch(char a[],char b[]);
 int main()
 {
     char a[D],b[D];
-    printf("ÇëÊäÈëÒ»¸ö×Ö·û´®£º");
+    printf("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼š");
     gets(a);
     Switch(a,b);
-    printf("¸Ã×Ö·û´®Äæ·´ºóÎª%s£¡\n",b);
+    printf("è¯¥å­—ç¬¦ä¸²é€†ååä¸º%sï¼\n",b);
     return 0;
 }
 void Switch(char a[],char b[])
@@ -209,3 +209,4 @@ void Switch(char a[],char b[])
     }
     b[i]='\0';
 }
+*/
