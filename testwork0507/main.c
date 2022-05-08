@@ -159,7 +159,7 @@
 //    }
 //    return 0;
 //}
-
+/*
 #include<stdio.h>
 #define N 50
 void MyStrcat(char *desStr,char *srcStr);
@@ -187,4 +187,121 @@ void MyStrcat(char *desStr,char *srcStr)
         desStr++;
     }
     *desStr='\0';
+}
+*/
+/*
+#include<stdio.h>
+#define N 50
+void Transpose(int (*a)[N], int n);
+void Swap(int *x, int *y);
+void InputMatrix(int (*a)[N], int n);
+void PrintMatrix(int (*a)[N], int n);
+main()
+{
+    int n,a[N][N];
+    printf("Input n:");
+    scanf("%d",&n);
+    InputMatrix(a,n);
+    Transpose(a,n);
+    printf("The transposed matrix is:\n");
+    PrintMatrix(a,n);
+
+}
+void Transpose(int (*a)[N], int n)
+{
+    int i,j;
+    for(i=0; i<n; i++)
+    {
+        for(j=i; j<n; j++)
+        {
+            Swap(*(a+i)+j,*(a+j)+i);
+
+        }
+    }
+}
+void  Swap(int *x, int *y)
+{
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+}
+void InputMatrix(int (*a)[N], int n)
+{
+    int i,j;
+    printf("Input %d*%d matrix:\n",n,n);
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d",*(a+i)+j);
+        }
+    }
+}
+void PrintMatrix(int (*a)[N], int n)
+{
+    int i,j;
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            printf("%d\t",*(*(a+i)+j));
+
+        }
+        printf("\n");
+    }
+}*/
+#include<stdio.h>
+#include<string.h>
+#define N 150
+#define MAX_len 10
+void ReadCountries(char str[N][MAX_len];int n);
+void Sorted(char str[N];int n);
+void Print(char str[N];int n);
+int main()
+{
+    int n,a[N][MAX_len];
+    printf("How many countries?");
+    scanf("%d",&n);
+    getchar();
+    ReadCountries(a,n);
+    Sorted(a,n);
+    printf("Sorted results:\n");
+    Print(a,n);
+    return 0;
+}
+void ReadCountries(char str[N];int n)
+{
+    int i;
+    printf("Input their names:\n");
+    for(i=0;i<n;i++)
+    {
+        gets(str[i]);
+    }
+}
+void Sorted(char str[N];int n)
+{
+    int i,j;
+    char temp[10];
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(strcmp(str[i],str[j])>0)
+            {
+                strcpy(temp,str[i]);
+                strcpy(str[i],str[j]);
+                strcpy(str[j],temp);
+            }
+        }
+
+    }
+}
+void Print(char str[N];int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%s\n",str[i]);
+    }
 }
